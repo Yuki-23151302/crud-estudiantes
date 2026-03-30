@@ -18,8 +18,7 @@ Agrega aquí una **captura de pantalla** de tu sistema funcionando (tabla de est
 
 ### 🔗 Enlaces del proyecto
 
-* **Repositorio en GitHub:** [Agrega aquí tu enlace]
-* **Sitio desplegado (opcional):** [Si lo despliegas, agrégalo aquí]
+* **Repositorio en GitHub:** [[Repositorio en git](https://github.com/Yuki-23151302/crud-estudiantes.git)]
 
 ---
 
