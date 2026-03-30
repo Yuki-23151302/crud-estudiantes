@@ -1,7 +1,7 @@
-# 🎓 Proyecto: CRUD de Estudiantes
+# 🎓 Proyecto: CRUD de Estudiantes y Carreras
 
-Este proyecto consiste en el desarrollo de un **sistema CRUD (Create, Read, Update, Delete)** utilizando **Laravel** y **Tailwind CSS**.
-El objetivo es aplicar los conocimientos sobre **arquitectura MVC**, manejo de base de datos, validaciones y creación de interfaces funcionales para gestionar una lista de estudiantes.
+Este proyecto consiste en el desarrollo de un **sistema CRUD (Create, Read, Update, Delete)** utilizando **Laravel** y **Tailwind CSS**.  
+El objetivo es aplicar los conocimientos sobre **arquitectura MVC**, manejo de base de datos, validaciones y creación de interfaces funcionales para gestionar estudiantes y carreras en un sistema educativo.
 
 ---
 
@@ -9,16 +9,29 @@ El objetivo es aplicar los conocimientos sobre **arquitectura MVC**, manejo de b
 
 ### 🧩 Vista previa del proyecto
 
-Agrega aquí una **captura de pantalla** de tu sistema funcionando (tabla de estudiantes o formulario).
+Agrega aquí capturas de pantalla de tu sistema funcionando.
 
-![Registrar Estudiante](image.png)
-![Lista Estudiante](image-1.png)
-![Tabla Estudiantes](image-2.png)
+**Estudiantes**
+![Lista de Estudiantes](image.png)  
+![Registrar Estudiante](image-1.png)  
+![Estudiante Registrado](image-2.png)  
+![Editar Estudiante](image-3.png)  
+![Estudiante Actualizado](image-4.png)  
+![Estudiante Eliminado](image-5.png)  
+
+**Carreras**
+![Lista de Carreras](image-6.png)  
+![Registrar Carrera](image-7.png)  
+![Carrera Registrada](image-8.png)  
+![Editar Carrera](image-9.png)  
+![Carrera Actualizada](image-10.png)  
+![Carrera Eliminada](image-11.png)  
+
 ---
 
 ### 🔗 Enlaces del proyecto
 
-* **Repositorio en GitHub:** [[Repositorio en git](https://github.com/Yuki-23151302/crud-estudiantes.git)]
+* **Repositorio en GitHub:** [[Repositorio en GitHub](https://github.com/Yuki-23151302/crud-estudiantes.git)]
 
 ---
 
@@ -26,85 +39,89 @@ Agrega aquí una **captura de pantalla** de tu sistema funcionando (tabla de est
 
 ### 🛠️ Tecnologías utilizadas
 
-Las herramientas y tecnologías utilizadas en este proyecto fueron:
-
-* Laravel 12
-* PHP 8.2
-* MySQL (XAMPP)
-* Tailwind CSS
-* Blade (motor de plantillas)
-* HTML5
+* Laravel 12  
+* PHP 8.2  
+* MySQL (XAMPP)  
+* Tailwind CSS  
+* Blade (motor de plantillas)  
+* HTML5  
 
 ---
 
 ## ⚙️ Funcionamiento del sistema
 
-El sistema permite gestionar estudiantes mediante las siguientes operaciones:
+El sistema permite gestionar **Estudiantes** y **Carreras** mediante las operaciones CRUD.
 
 ### 🟢 Crear (Create)
 
-Se pueden registrar nuevos estudiantes mediante un formulario que solicita:
+**Estudiantes:**  
+Formulario para registrar:  
+* Nombre  
+* Correo electrónico  
+* Carrera  
+* Semestre  
 
-* Nombre
-* Correo electrónico
-* Carrera
-* Semestre
+**Carreras:**  
+Formulario para registrar:  
+* Nombre  
 
-Los datos son validados antes de guardarse en la base de datos.
+> Ambos formularios validan los datos antes de guardarlos en la base de datos y muestran mensajes de éxito:  
+> - “Estudiante registrado exitosamente”  
+> - “Carrera registrada exitosamente”
 
 ---
 
 ### 📋 Leer (Read)
 
-Se muestra una tabla con todos los estudiantes registrados, donde se visualiza:
+**Estudiantes:**  
+Se muestra una tabla con todos los estudiantes registrados:  
+* Número (numeración visual)  
+* Nombre  
+* Correo  
+* Carrera  
+* Semestre  
 
-* Número (numeración visual)
-* Nombre
-* Correo
-* Carrera
-* Semestre
+**Carreras:**  
+Se muestra una tabla con todas las carreras registradas:  
+* Número  
+* Nombre  
 
 ---
 
 ### ✏️ Actualizar (Update)
 
-Permite editar la información de un estudiante:
-
-* Se cargan los datos actuales en un formulario
-* Se pueden modificar los campos
-* Los cambios se guardan en la base de datos
+Se pueden editar los datos de estudiantes y carreras desde un formulario:  
+* Se cargan los datos actuales  
+* Se pueden modificar  
+* Al guardar, se muestran mensajes de éxito:  
+> - “Estudiante actualizado exitosamente”  
+> - “Carrera actualizada exitosamente”
 
 ---
 
 ### ❌ Eliminar (Delete)
 
-Permite eliminar estudiantes desde la tabla:
-
-* Se elimina el registro seleccionado
-* La tabla se actualiza automáticamente
+Se pueden eliminar registros desde la tabla:  
+* Se elimina el registro seleccionado  
+* Se muestran mensajes de éxito:  
+> - “Estudiante eliminado exitosamente”  
+> - “Carrera eliminada exitosamente”  
 
 ---
 
-## ⚠️ Nota importante
+## ⚠️ Nota importante sobre numeración visual
 
-En la tabla de estudiantes se muestra una **numeración visual** para mejorar la presentación de los datos en la interfaz.
+La numeración en las tablas es **visual y dinámica**:
 
-Esta numeración se genera dinámicamente en la vista utilizando herramientas de Blade, por lo que:
+* ✔ Se muestra consecutivamente (1, 2, 3…)  
+* ✔ Se actualiza al eliminar registros  
+* ❌ No corresponde al ID real en la base de datos  
 
-* ✔ Se muestra de forma consecutiva (1, 2, 3, 4…)
-* ✔ Se actualiza automáticamente al eliminar registros
-* ❌ **No corresponde al ID real de la base de datos**
+El ID original **no se modifica**, ya que es la clave primaria y asegura la integridad de los datos.
 
-Es importante aclarar que:
+---
 
-> El ID original de cada estudiante en la base de datos **no se modifica ni se reordena** al eliminar registros, ya que forma parte de la clave primaria y garantiza la integridad de la información.
-
-Esta decisión sigue buenas prácticas de desarrollo, separando la lógica de presentación (interfaz) de la estructura real de los datos.
-
-
-## 🧱 Project Structure
-
-La estructura principal del proyecto sigue el patrón MVC de Laravel:
+## 🧱 Estructura del proyecto
 
 ```bash
 crud-estudiantes/
@@ -116,7 +133,8 @@ crud-estudiantes/
 │   │
 │   └── Http/
 │       └── Controllers/
-│           └── EstudianteController.php
+│           ├── EstudianteController.php
+│           └── CarreraController.php
 │
 ├── database/
 │   └── migrations/
@@ -128,7 +146,12 @@ crud-estudiantes/
 │       ├── layouts/
 │       │   └── app.blade.php
 │       │
-│       └── estudiantes/
+│       ├── estudiantes/
+│       │   ├── index.blade.php
+│       │   ├── create.blade.php
+│       │   └── edit.blade.php
+│       │
+│       └── carreras/
 │           ├── index.blade.php
 │           ├── create.blade.php
 │           └── edit.blade.php
@@ -155,8 +178,8 @@ Además, trabajé con Tailwind CSS para diseñar una interfaz moderna y consiste
 
 Algunos aspectos que podrían mejorarse en futuros proyectos son:
 
-* Implementar paginación en la tabla de estudiantes
-* Agregar un buscador para filtrar registros
+* Paginación en las tablas
+* Buscador y filtros para registros
 * Mejorar la validación con mensajes personalizados
 * Implementar autenticación de usuarios
 * Mejorar la experiencia del usuario con animaciones

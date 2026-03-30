@@ -15,9 +15,18 @@
 
     <!-- Navbar -->
     <nav class="bg-red-900 p-4 shadow-lg">
-        <div class="container mx-auto flex justify-between">
-            <h1 class="text-xl font-bold">CRUD Estudiantes</h1>
-            <a href="/estudiantes" class="hover:text-red-300">Inicio</a>
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">CRUD Colegio</h1>
+            <div class="space-x-4">
+                <a href="{{ route('estudiantes.index') }}" 
+                   class="hover:text-red-300 {{ request()->routeIs('estudiantes.*') ? 'underline' : '' }}">
+                    Estudiantes
+                </a>
+                <a href="{{ route('carreras.index') }}" 
+                   class="hover:text-red-300 {{ request()->routeIs('carreras.*') ? 'underline' : '' }}">
+                    Carreras
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -28,6 +37,7 @@
             {{ session('success') }}
         </div>
         @endif
+
         @yield('content')
     </div>
 
