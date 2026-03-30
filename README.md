@@ -119,6 +119,9 @@ La numeración en las tablas es **visual y dinámica**:
 
 El ID original **no se modifica**, ya que es la clave primaria y asegura la integridad de los datos.
 
+![Tabla Estudiantes](image-13.png)
+![Tabla Carreras](image-12.png)
+
 ---
 
 ## 🧱 Estructura del proyecto
