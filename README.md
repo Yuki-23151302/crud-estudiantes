@@ -11,21 +11,49 @@ El objetivo es aplicar los conocimientos sobre **arquitectura MVC**, manejo de b
 
 Agrega aquí capturas de pantalla de tu sistema funcionando.
 
-**Estudiantes**
-![Lista de Estudiantes](image.png)  
-![Registrar Estudiante](image-1.png)  
-![Estudiante Registrado](image-2.png)  
-![Editar Estudiante](image-3.png)  
-![Estudiante Actualizado](image-4.png)  
-![Estudiante Eliminado](image-5.png)  
+### Estudiantes
+Lista de Estudiantes
+![Lista de Estudiantes](image.png)!
 
-**Carreras**
-![Lista de Carreras](image-6.png)  
-![Registrar Carrera](image-7.png)  
-![Carrera Registrada](image-8.png)  
-![Editar Carrera](image-9.png)  
-![Carrera Actualizada](image-10.png)  
-![Carrera Eliminada](image-11.png)  
+Registrar Estudiante
+![Registrar Estudiante](image-1.png) 
+
+Estudiante Registrado
+![Estudiante Registrado](image-2.png)  
+
+Editar Estudiante
+![Editar Estudiante](image-3.png)  
+
+Estudiante Actualizado
+![Estudiante Actualizado](image-4.png)
+
+Confirmación de Eliminar Estudiante
+![Confirmación de Eliminar Estudiante](image-5.png)
+
+Estudiante Eliminado
+![Estudiante Eliminado](image-6.png) 
+
+### Carreras
+Lista de Carreras
+![Lista de Carreras](image-7.png)
+
+Registrar Carrera
+![Registrar Carrera](image-8.png) 
+
+Carrera Registrada
+![Carrera Registrada](image-9.png) 
+
+Editar Carrera
+![Editar Carrera](image-10.png)  
+
+Carrera Actualizada
+![Carrera Actualizada](image-11.png) 
+
+Confirmación de Eliminar Carrera
+![Confirmación de Eliminar Carrera](image-12.png)
+
+Carrera Eliminada
+![Carrera Eliminada](image-13.png) 
 
 ---
 
@@ -119,8 +147,8 @@ La numeración en las tablas es **visual y dinámica**:
 
 El ID original **no se modifica**, ya que es la clave primaria y asegura la integridad de los datos.
 
-![Tabla Estudiantes](image-13.png)
-![Tabla Carreras](image-12.png)
+![Tabla Estudiantes](image-14.png)
+![Tabla Carreras](image-15.png)
 
 ---
 

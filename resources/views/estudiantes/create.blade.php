@@ -2,10 +2,12 @@
 
 @section('content')
 
-<h2 class="text-2xl font-bold mb-6">Registrar Estudiante</h2>
+<h2 class="text-3xl font-bold mb-6 border-b border-red-800 pb-2">
+    Registrar Estudiante
+</h2>
 
 @if($errors->any())
-    <div class="bg-red-700 p-3 mb-4 rounded">
+    <div class="bg-red-700 p-4 mb-6 rounded shadow">
         <ul>
             @foreach($errors->all() as $error)
                 <li>- {{ $error }}</li>
@@ -14,27 +16,30 @@
     </div>
 @endif
 
-<form action="/estudiantes" method="POST" class="bg-gray-900 p-6 rounded shadow-md">
+<div class="max-w-lg mx-auto bg-gray-900 p-6 rounded shadow-lg">
 
+<form action="/estudiantes" method="POST">
     @csrf
 
     <!-- Nombre -->
     <div class="mb-4">
-        <label class="block mb-1">Nombre</label>
+        <label class="block mb-2 font-semibold">Nombre</label>
         <input type="text" name="nombre" 
-               class="w-full p-2 rounded bg-black border border-red-700">
+               class="w-full p-2 rounded bg-black border border-red-700 
+               focus:outline-none focus:ring-2 focus:ring-red-700">
     </div>
 
     <!-- Correo -->
     <div class="mb-4">
-        <label class="block mb-1">Correo</label>
+        <label class="block mb-2 font-semibold">Correo</label>
         <input type="email" name="correo" 
-               class="w-full p-2 rounded bg-black border border-red-700">
+               class="w-full p-2 rounded bg-black border border-red-700 
+               focus:outline-none focus:ring-2 focus:ring-red-700">
     </div>
 
     <!-- Carrera -->
     <div class="mb-4">
-        <label class="block mb-1">Carrera</label>
+        <label class="block mb-2 font-semibold">Carrera</label>
         <select name="carrera_id" 
                 class="w-full p-2 rounded bg-black border border-red-700">
             @foreach($carreras as $carrera)
@@ -46,16 +51,26 @@
     </div>
 
     <!-- Semestre -->
-    <div class="mb-4">
-        <label class="block mb-1">Semestre</label>
+    <div class="mb-5">
+        <label class="block mb-2 font-semibold">Semestre</label>
         <input type="number" name="semestre" 
                class="w-full p-2 rounded bg-black border border-red-700">
     </div>
 
-    <button class="bg-red-700 hover:bg-red-800 px-4 py-2 rounded">
-        Guardar
-    </button>
+    <!-- BOTONES -->
+    <div class="flex gap-3">
+        <button class="bg-red-700 hover:bg-red-800 px-5 py-2 rounded transition">
+            Guardar
+        </button>
+
+        <a href="{{ route('estudiantes.index') }}" 
+           class="bg-gray-700 hover:bg-gray-800 px-5 py-2 rounded transition">
+            Cancelar
+        </a>
+    </div>
 
 </form>
+
+</div>
 
 @endsection
