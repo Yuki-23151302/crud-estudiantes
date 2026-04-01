@@ -43,7 +43,7 @@
     <script>
         Swal.fire({
             title: 'CRUD Colegio',
-            text: '{{ session('success') }}',
+            text: "{{ session('success') }}",
             icon: 'success',
             confirmButtonColor: '#b91c1c',
             background: '#111827',

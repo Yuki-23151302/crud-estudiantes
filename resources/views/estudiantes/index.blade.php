@@ -46,7 +46,7 @@
                     @method('DELETE')
 
                     <button type="button"
-                        onclick="confirmarEliminacion({{ $estudiante->id }}, 'estudiante')"
+                        onclick="confirmarEliminacion({{ $estudiante->id }}, &quot;estudiante&quot;)"
                         class="bg-red-700 hover:bg-red-800 px-4 py-1 rounded transition">
                         Eliminar
                     </button>
