@@ -40,8 +40,8 @@
                 </a>
 
                 <form id="form-eliminar-estudiante-{{ $estudiante->id }}" 
-                      action="{{ route('estudiantes.destroy', $estudiante->id) }}" 
-                      method="POST">
+                    action="{{ route('estudiantes.destroy', $estudiante->id) }}" 
+                    method="POST">
                     @csrf
                     @method('DELETE')
 

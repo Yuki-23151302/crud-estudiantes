@@ -30,16 +30,20 @@ class CarreraController extends Controller
                          ->with('success', 'Carrera registrada exitosamente');
     }
 
-    public function edit(Carrera $carrera)
+    public function edit($id)
     {
+        $carrera = Carrera::findOrFail($id);
+
         return view('carreras.edit', compact('carrera'));
     }
 
-    public function update(Request $request, Carrera $carrera)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'nombre' => 'required'
         ]);
+
+        $carrera = Carrera::findOrFail($id);
 
         $carrera->update($request->only('nombre'));
 
@@ -47,8 +51,10 @@ class CarreraController extends Controller
                          ->with('success', 'Carrera actualizada exitosamente');
     }
 
-    public function destroy(Carrera $carrera)
+    public function destroy($id)
     {
+        $carrera = Carrera::findOrFail($id);
+
         $carrera->delete();
 
         return redirect()->route('carreras.index')

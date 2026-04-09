@@ -18,7 +18,7 @@
 
 <div class="max-w-lg mx-auto bg-gray-900 p-6 rounded shadow-lg">
 
-<form action="/estudiantes/{{ $estudiante->id }}" method="POST">
+<form action="{{ route('estudiantes.update', $estudiante->id) }}" method="POST">
     @csrf
     @method('PUT')
 
